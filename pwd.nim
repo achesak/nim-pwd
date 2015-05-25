@@ -4,16 +4,19 @@
 # Released under the MIT open source license.
 
 
+import strutils
+
+
 type
     Pwd* = ref PwdInternal
     
     PwdInternal* = object
-        pw_name : string,
-        pw_passwd : string,
-        pw_uid : int,
-        pw_gid : int,
-        pw_gecos : string,
-        pw_dir : string,
+        pw_name : string
+        pw_passwd : string
+        pw_uid : int
+        pw_gid : int
+        pw_gecos : string
+        pw_dir : string
         pw_shell : string
 
 
