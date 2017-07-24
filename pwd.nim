@@ -8,9 +8,7 @@ import strutils
 
 
 type
-    Pwd* = ref PwdInternal
-    
-    PwdInternal* = object
+    Pwd* = ref object
         pw_name : string
         pw_passwd : string
         pw_uid : int
@@ -62,3 +60,4 @@ proc getpwnam*(name : string): Pwd =
             return i
     
     return nil
+
